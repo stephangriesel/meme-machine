@@ -1,0 +1,7 @@
+Make it look really nice
+Allow users to provide a custom video
+Download the meme as an image file
+Add fancy text effects to the text overlay
+Push the resulting meme to a social media API
+
+P.s. We've already added some libraries to make your life easier (Redux, Jss, React Router), but feel free to add more.
