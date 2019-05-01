@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 
 import {toggleTitleColor} from './store';
 
+import Video from './components/Video';
+import MemeText from './components/MemeText';
 
 const styles = theme => ({
   '@global body': {
@@ -60,23 +62,8 @@ class App extends Component {
           <Switch>
             <Route path="/home">
               <>
-                <video
-                  width="800"
-                  height="450"
-                  playsInline                  
-                  autoPlay
-                  muted
-                  loop
-                >
-                  <source
-                    src="https://upload.wikimedia.org/wikipedia/en/transcoded/6/61/Old_Man_Drinking_a_Glass_of_Beer_%281897%29.webm/Old_Man_Drinking_a_Glass_of_Beer_%281897%29.webm.360p.webm"
-                    type="video/webm"
-                  />
-                </video>
-                <label>
-                  Meme text:
-                  <input type="text" placeholder="Something edgy..." />
-                </label>
+                <Video />
+                <MemeText />
               </>
             </Route>
             <Route path="/readme">
