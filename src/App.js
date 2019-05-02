@@ -9,7 +9,7 @@ import {toggleTitleColor} from './store';
 import Video from './components/Video';
 import MemeText from './components/MemeText';
 import ReadMe from './components/ReadMe';
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
 
 const styles = theme => ({
   '@global body': {
@@ -53,10 +53,22 @@ const dtp = (dispatch) => bindActionCreators( {
 }, dispatch)
 
 class App extends Component {
+
+  vidRefInput = React.createRef();
+
+
+    handleSubmit = e => {
+        e.preventDefault();
+
+        console.log(this.vidRefInput);
+
+    };
+
   render() {
     const { classes, titleColor, toggleTitleColor } = this.props;
     return (
       <div className={classes.App}>
+      <div id="content"></div>
         <header className="App-header">
           <h1 onClick={toggleTitleColor} className={ classes[`title-${titleColor}`] }>Vintage Meme Machine</h1>
         </header>
@@ -64,7 +76,7 @@ class App extends Component {
           <Switch>
             <Route path="/home">
               <>
-                <Video />
+                <Video vidRefInput={this.vidRefInput}/>
                 <MemeText />
               </>
             </Route>
