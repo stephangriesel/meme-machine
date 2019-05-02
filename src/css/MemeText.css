@@ -1,0 +1,16 @@
+label {
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  font-size: 2rem;
+  height:80px;
+}
+
+input {
+  font-size:18px;
+  padding:15px;
+  border:none;
+  width:400px;
+  outline:none;
+}

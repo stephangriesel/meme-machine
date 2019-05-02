@@ -4,9 +4,10 @@ import '../css/Video.css';
 class Video extends Component {
     render() {
         return (
-            <div class="video-wrapper">
+            <div className="video-wrapper">
                 <video
-                    width="800"
+                    maxwidth="800"
+                    width="100%"
                     height="450"
                     playsInline
                     autoPlay

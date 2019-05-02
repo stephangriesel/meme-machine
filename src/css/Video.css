@@ -12,5 +12,19 @@
 
 video {
     position: absolute;
-    left:25%;
+    left:-4%;
+}
+
+@media screen and (max-width: 800px) {
+    .video-wrapper {
+        background-image:none;
+        background-color: #000000;
+        height:90vh;
+
+    }
+
+    video {
+        position: absolute;
+        left:0%;
+    }
 }
