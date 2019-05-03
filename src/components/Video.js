@@ -9,7 +9,7 @@ class Video extends Component {
 
         this.textInput = React.createRef();
         this.state = {
-            value: ''
+            value: 'Your Video URL will display here'
         }
     }
 
@@ -29,7 +29,7 @@ class Video extends Component {
                     <p>Your video: {this.state.value}</p>
                 </div>
                 <div className="add-video">
-                    <h3>Add Your Own</h3>
+                    <h3>ADD YOUR OWN VIDEO</h3>
                     <form onSubmit={(e) => { e.preventDefault(); this.setState({ showVideo: true }) }}>
                         <input type="text" value={this.state.value} onChange={(e) => this.setState({ value: e.target.value })} />
                         <button type="submit" value="submit">Go!</button>
@@ -54,7 +54,7 @@ class Video extends Component {
                         </video>
                         :
                         <div >
-                        <img className="vidPlaceholder" src={snowflakes} />;
+                        <img className="vidPlaceholder" src={snowflakes} />
                         </div>
                         }
                 </div>

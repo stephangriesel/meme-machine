@@ -1,7 +1,4 @@
 .video-wrapper {
-    /* background-image: url("../img/tv.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,25 +11,12 @@
     text-align: center;
 }
 
-/* video {
-    left: 31%;
-    position: absolute;
-    width: 595px;
-    top: 85%;
-    height: 472px;
-} */
-
-/* .vidPlaceholder {
-    left: 31.5%;
-    position: absolute;
-    width: 582px;
-    top: 91%;
-    height: 440px;
-} */
-
 .add-video {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 800px) {
