@@ -54,17 +54,10 @@ const dtp = (dispatch) => bindActionCreators( {
 
 class App extends Component {
 
-  vidRefInput = React.createRef();
-
-
-    handleSubmit = e => {
-        e.preventDefault();
-
-        console.log(this.vidRefInput);
-
-    };
-
   render() {
+    const vidinput = {
+      src: "https://upload.wikimedia.org/wikipedia/en/transcoded/6/61/Old_Man_Drinking_a_Glass_of_Beer_%281897%29.webm/Old_Man_Drinking_a_Glass_of_Beer_%281897%29.webm.360p.webm"
+    }
     const { classes, titleColor, toggleTitleColor } = this.props;
     return (
       <div className={classes.App}>
@@ -76,7 +69,7 @@ class App extends Component {
           <Switch>
             <Route path="/home">
               <>
-                <Video vidRefInput={this.vidRefInput}/>
+                <Video src={vidinput}/>
                 <MemeText />
               </>
             </Route>
