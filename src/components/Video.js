@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import AddVideo from './AddVideo';
 
 import '../css/Video.css';
 import snowflakes from '../img/snowflakes.gif';
-import html2canvas from 'html2canvas';
 
 
 class Video extends Component {
