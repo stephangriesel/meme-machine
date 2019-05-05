@@ -31,7 +31,7 @@ const styles = theme => ({
       margin: '10px'
     },
     '& a': {
-      color: theme.palette.text,
+      color: '#FFFFFF',
     }
   },
   'title-primary': {

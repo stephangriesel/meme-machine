@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import AddVideo from './AddVideo';
+
 import '../css/Video.css';
 import snowflakes from '../img/snowflakes.gif';
 import html2canvas from 'html2canvas';
@@ -25,19 +27,20 @@ class Video extends Component {
         this.setState({ value: this.textInput.current.value })
     };
 
-    html2canvas(event){
-        console.log("download clicked")
-    }
+    // html2canvas(){
+    //     document.body.appendChild(canvas)
+    //     console.log("download clicked")
+    // }
 
     render() {
         console.log(this.state)
         return (
             <React.Fragment>
-                <div className="demo-vids center">
+                {/* <div className="demo-vids center">
                     <p>Here are some demo videos:</p>
                     <p><a href="http://dl3.webmfiles.org/big-buck-bunny_trailer.webm">Demo #1</a></p>
                     <p><a href="http://dl3.webmfiles.org/elephants-dream.webm">Demo #2</a></p>
-                </div>
+                </div> */}
                 <div>
                     <form
                         className="add-video"
@@ -57,7 +60,6 @@ class Video extends Component {
                         />
                         <button type="submit" value="submit">Go!</button>
                     </form>
-                    {/* <p>Video Currently Playing: {this.state.value}</p> */}
                 </div>
                 <div className="video-wrapper">
                     {this.state.showVideo ?
@@ -96,8 +98,10 @@ class Video extends Component {
                             value={this.state.overlayText}
                             onChange={this.handleChange}
                         />
-                        <button>Add</button>
-                        <button onClick={this.html2canvas}>Download</button>
+                        <div className="buttons-row">
+                            <button>Add</button>
+                            <button onClick={this.html2canvas}>Download</button>
+                        </div>
                     </form>
 
                 </div>

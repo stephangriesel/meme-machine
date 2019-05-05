@@ -1,9 +1,10 @@
 nav {
   display:flex;
   justify-content: center;
+  margin:20px 0;
 }
 
-a {
+a:active, a:visited, a:link  {
   text-decoration: none;
 }
 
@@ -16,11 +17,13 @@ a {
 }
 
 .menu li {
+  background: #333333;
   margin:15px 10px;
   padding:5px;
   text-transform: uppercase;
-  /* border: solid 1px #EEE; */
-  font-size: 2rem;
+  font-size: 1rem;
+  width: 100px;
+  text-align: center;
 }
 
 li:hover {

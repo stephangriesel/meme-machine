@@ -24,6 +24,7 @@
 .add-video input {
   width: 400px;
   padding: 10px;
+  outline:none;
 }
 
 button {
@@ -67,25 +68,46 @@ button {
 .overlayInput input {
   width: 400px;
   padding: 10px;
+  outline:none;
 }
 
 button {
+  cursor: pointer;
+  font-size:18px;
+  text-transform: uppercase;
+  border:none;
+  border-radius:10px;
+  background:#f1df98;
   width: 150px;
   padding: 10px;
+}
+
+.buttons-row {
+  display:flex;
+}
+
+.buttons-row button {
+  margin:0px 10px;
 }
 
 /* Demo Vids Text */
 
 .demo-vids {
+  color:#FFF;
   display: flex;
   flex-direction: column;
-  background: rgb(36, 33, 33);
+  background:#333;
   border-radius: 20px;
   padding:10px;
   margin:20px 0;
 }
 
 .demo-vids p {
+  color:#FFF;
   padding: 0;
   margin: 0;
+}
+
+.demo-vids {
+  color:#FFF;
 }
