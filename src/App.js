@@ -7,7 +7,6 @@ import { connect } from 'react-redux'
 import {toggleTitleColor} from './store';
 
 import Video from './components/Video';
-import MemeText from './components/MemeText';
 import ReadMe from './components/ReadMe';
 import Navbar from './components/Navbar';
 
@@ -69,7 +68,6 @@ class App extends Component {
             <Route path="/home">
               <>
                 <Video/>
-                <MemeText />
               </>
             </Route>
             <Route path="/readme">
