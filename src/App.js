@@ -10,7 +10,7 @@ import Video from './components/Video';
 import ReadMe from './components/ReadMe';
 import Navbar from './components/Navbar';
 
-const styles = theme => ({
+const styles = theme => ({ // https://cssinjs.org/react-jss/?v=v10.0.0-alpha.16
   '@global body': {
     background: theme.palette.background,
     color: theme.palette.text
@@ -66,9 +66,7 @@ class App extends Component {
         <main>
           <Switch>
             <Route path="/home">
-              <>
                 <Video/>
-              </>
             </Route>
             <Route path="/readme">
               <ReadMe />

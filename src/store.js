@@ -11,13 +11,13 @@ const defaultState = {
 }
 
 function memeState(state=defaultState, action ){
-  
+
     switch(action.type){
-      
+
         case TOGGLE_TITLE_COLOR:
             return {
                 ...state,
-                titleColor: state.titleColor === 'primary' ? 'secondary' : 'primary',
+                titleColor: state.titleColor === 'primary' ? 'secondary' : 'primary', // condition ? true : false.
             };
 
         default:

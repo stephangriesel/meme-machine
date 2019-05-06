@@ -25,25 +25,20 @@ class Video extends Component {
         this.setState({ value: this.textInput.current.value })
     };
 
-    // html2canvas(){
-    //     document.body.appendChild(canvas)
-    //     console.log("download clicked")
-    // }
-
     render() {
         console.log(this.state)
         return (
             <React.Fragment>
-                {/* <div className="demo-vids center">
+                <div className="demo-vids center">
                     <p>Here are some demo videos:</p>
                     <p><a href="http://dl3.webmfiles.org/big-buck-bunny_trailer.webm">Demo #1</a></p>
                     <p><a href="http://dl3.webmfiles.org/elephants-dream.webm">Demo #2</a></p>
-                </div> */}
+                </div>
                 <div>
                     <form
                         className="add-video"
-                        onSubmit={(e) => {
-                            e.preventDefault();
+                        onSubmit={(event) => {
+                            event.preventDefault();
                             this.setState({
                                 showVideo: true
                             })
@@ -52,15 +47,15 @@ class Video extends Component {
                             placeholder="Add your video"
                             type="text"
                             value={this.state.value}
-                            onChange={(e) => this.setState({
-                                value: e.target.value
+                            onChange={(event) => this.setState({
+                                value: event.target.value
                             })}
                         />
                         <button type="submit" value="submit">Go!</button>
                     </form>
                 </div>
-                <div className="video-wrapper">
-                    {this.state.showVideo ?
+                <div id="capture" className="video-wrapper"> {/* Capture class was going to be used for screenshot */}
+                    {this.state.showVideo ? // condition ? true : false.
                         <React.Fragment>
                             <video
                                 className="video-display"
@@ -98,7 +93,7 @@ class Video extends Component {
                         />
                         <div className="buttons-row">
                             <button>Add</button>
-                            <button onClick={this.html2canvas}>Download</button>
+                            <button onClick={this.captureCanvas}>Download</button> {/* Plan was to use*/}
                         </div>
                     </form>
 
